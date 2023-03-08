@@ -1,0 +1,30 @@
+{
+  "files.insertFinalNewline": true,
+  "python.linting.enabled": true,
+  "python.linting.ignorePatterns": [
+    "**/site-packages/**/*.py",
+    ".vscode/*.py",
+    "**/.vscode-server/**/*.py",
+    "**/.vscode-server/**/*.pyi"
+  ],
+  "python.analysis.ignore": ["/usr/**/*.py"],
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfArgs": ["--style={based_on_style: google, column_limit: 120, indent_width: 4}"],
+  "pylint.args": ["--disable=C0114", "--max-line-length=120"],
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "python.linting.banditEnabled": true,
+  "python.autoComplete.extraPaths": ["/app/"],
+  "python.languageServer": "Pylance",
+  "python.linting.mypyEnabled": true,
+  "flake8.args": ["--max-line-length=120"],
+  "[python]": {
+    "editor.rulers": [120],
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "isort.args": ["--profile", "black", "--multi-line", "7", "--sl"],
+  "python.analysis.extraPaths": ["/app/"]
+}
